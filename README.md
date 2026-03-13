@@ -1,30 +1,29 @@
 # Tecboard
 
-Project developed during a front-end course.
+Landing page developed during a front-end course to practice HTML and CSS.
 
-This project demonstrates basic React concepts such as components, props and stage management.
+The project simulates a monitoring platform landing page with a responsive layout.
 
 ## Features
 
-- Task management
-- Simple UI
-- Component-based architecture
+- Responsive landing page
+- Custom fonts
+- Hero section
+- Call to action button
 
 ## Technologies
 
-- React
-- JavaScript
 - HTML
 - CSS
 
 ## Screenshot
 
-(Add a  screenshot here)
+![Tecboard Sreenshot](assets/img/screenshot.png)
 
 ## How to run
 
 Clone the repository
 
-git clone https://github.com/eduardo-heck/tecboard
+git clone https://github.com/eduardo-heck/tecboard-landing-page
 
-Open the project an run it locally.
+Open `index.html` in your browser.
