@@ -1,7 +1,7 @@
-/* Definição de fontes */
+/* Fonts */
 @font-face {
     font-family: "Unbounded";
-    src: url("../assets/fonts/Unbounded-Bold.ttf") format("truetype");
+    src: url("assets/fonts/Unbounded-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+    src: url("assets/fonts/Poppins-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -19,86 +19,137 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilo Desktop */
+/* Base */
 body {
-    background: #0E1014;
-    color: #FFFFFF;
+    background: #0e1014;
+    color: #ffffff;
 }
 
-header img {
+.header {
+    padding: 48px 24px 0;
+}
+
+.logo {
     display: block;
-    margin: 75px 0 0 360px;
+    max-width: 180px;
+    height: auto;
 }
 
-h1 {
+.main-content {
+    padding: 40px 24px 80px;
+}
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
     font-size: 64px;
     font-family: "Unbounded", sans-serif;
-    text-align: center;
-    margin-top: 60px;
+    line-height: 1.15;
 }
 
-h1 span {
-    color: #9747FF;
+.hero h1 span {
+    color: #9747ff;
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
+.hero p {
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
-    text-align: center;
+    line-height: 1.5;
+    max-width: 792px;
     margin: 24px auto 0;
-    width: 792px;
 }
 
-a {
+.cta-button {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     font-size: 24px;
     text-decoration: none;
-    background-color: #9747FF;
+    background-color: #9747ff;
     width: 340px;
     height: 66px;
-    display: block;
-    text-align: center;
-    line-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 36px;
     margin: 40px auto;
+    transition: background-color 0.2s ease;
 }
 
-a:hover {
-    background-color: #8233E8;
+.cta-button:hover {
+    background-color: #8233e8;
 }
 
-section img {
+.hero-image {
     display: block;
-    width: 792px;
-    height: 446px;
+    width: 100%;
+    max-width: 792px;
+    height: auto;
     margin: 0 auto;
 }
 
+/* Tablet */
 @media (max-width: 768px) {
-    header img {
-        margin: 65px 0 0 60px;
+    .header {
+        padding: 40px 24px 0;
     }
-    p {
-        width: 648px;
+
+    .logo {
+        max-width: 160px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        max-width: 648px;
+    }
+
+    .cta-button {
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
     }
 }
 
+/* Mobile */
 @media (max-width: 375px) {
-    header img {
-        margin: 32px 0 0 16px;
+    .header {
+        padding: 32px 16px 0;
     }
-    h1 {
+
+    .logo {
+        max-width: 140px;
+    }
+
+    .main-content {
+        padding: 32px 16px 56px;
+    }
+
+    .hero h1 {
         font-size: 40px;
     }
-    p {
+
+    .hero p {
         font-size: 20px;
-        width: 340px;
+        max-width: 340px;
     }
-    section img {
-        width: 340px;
-        height: 230px;
+
+    .cta-button {
+        width: 100%;
+        max-width: 340px;
+        font-size: 18px;
+    }
+
+    .hero-image {
+        max-width: 340px;
     }
 }
